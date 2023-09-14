@@ -1,0 +1,10 @@
+.Button {
+  padding: calc(var(--spacing-gap)/2);
+  color: var(--grey-100);
+  background-color: var(--purple-400);
+
+  border: 1px solid var(--purple-900);
+  border-radius: calc(var(--spacing-gap)/4);
+
+  font-size: 1rem;
+}

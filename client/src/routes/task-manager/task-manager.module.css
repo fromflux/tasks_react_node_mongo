@@ -1,0 +1,70 @@
+.TaskManager {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing-gap);
+}
+
+.taskList {
+  background-color: var(--purple-900);
+  padding: calc(var(--spacing-gap));
+  border-radius: calc(var(--spacing-gap)/2);
+  display: grid;
+  gap: var(--spacing-gap);
+
+  min-width: 100%;
+}
+
+.taskItem {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+
+  gap: calc(var(--spacing-gap)/2);
+  padding: calc(var(--spacing-gap));
+  background-color: var(--purple-800);
+  border-radius: calc(var(--spacing-gap)/4);
+}
+
+.newTaskDialog {
+  background-color: var(--purple-800);
+  color: var(--purple-100);
+  padding: var(--spacing-gap);
+  border-radius: calc(var(--spacing-gap)/2);
+}
+
+.newTaskDialog:modal {
+  min-width: calc(100% - calc(var(--spacing-gap)*6));
+}
+
+.newTaskDialog::backdrop {
+  background: rgb(29 4 23 / 90%);
+}
+
+.dialogForm {
+  min-width: 100%;
+  display: grid;
+  gap: var(--spacing-gap);
+}
+
+.dialogForm>label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: calc(var(--spacing-gap)/2);
+}
+
+.dialogFormButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: calc(var(--spacing-gap)/2);
+}
+
+@media screen and (min-width: 768px) {
+  .taskList {
+    min-width: 50svw;
+  }
+
+  .newTaskDialog:modal {
+    min-width: auto;
+    max-width: 50svw;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "tasks_react_node_mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm install --prefix ./server && npm install --prefix ./client",
+    "dev": "concurrently --kill-others \"npm run dev --prefix ./server\" \"npm run dev --prefix ./client\""
+  },
+  "keywords": [],
+  "author": "Rod Melo",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
